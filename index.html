@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Playlists</h2>
+        <ul id="playlists">
+            <li data-playlist="all" class="active">All Songs</li>
+            <li data-playlist="pop">Pop</li>
+            <li data-playlist="sad">Sad</li>
+            <li data-playlist="love">Love</li>
+            <li data-playlist="ost">OST</li>
+            <li data-playlist="liked">Liked ❤️</li>
+        </ul>
+    </div>
+
+    <!-- Main Songs Area -->
+    <div class="main">
+        <h1 id="playlist-title">All Songs</h1>
+        <ul id="song-list"></ul>
+    </div>
+
+    <!-- Player -->
+    <div class="player">
+        <div class="song-info">
+            <img id="cover" src="images/default.jpg" alt="cover" />
+            <div>
+                <h3 id="title">Select a song</h3>
+                <p id="artist"></p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="play">▶</button>
+            <button id="next">⏭</button>
+        </div>
+
+        <div class="progress-area">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" value="0" min="0" max="100" />
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="volume">
+            <span>🔊 Volume</span>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1" />
+            <button id="mute">🔇</button>
+        </div>
+
+        <div class="like">
+            <button id="like">♡</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
